@@ -6,7 +6,6 @@ function App() {
   const [videoId, setVideoId] = useState('');
   const [isPlaying, setIsPlaying] = useState(false);
   const [startTime, setStartTime] = useState(0);
-  const [endTime, setEndTime] = useState(0);
   const playerRef = useRef<any>(null);
 
   const extractVideoId = (url: string) => {
@@ -44,7 +43,7 @@ function App() {
         playerRef.current = new (window as any).YT.Player('youtube-player', {
           videoId: videoId,
           events: {
-            'onReady': (event: any) => {
+            'onReady': () => {
               console.log('Player ready');
             }
           }
@@ -118,7 +117,6 @@ function App() {
   const handleSetEnd = async () => {
     if (playerRef.current && playerRef.current.getCurrentTime) {
       const time = Math.floor(playerRef.current.getCurrentTime());
-      setEndTime(time);
       
       const embedCode = `<iframe src="https://www.youtube.com/embed/${videoId}?start=${startTime}&end=${time}" height="360" width="95%" seamless="seamless" frameborder="0" allowfullscreen></iframe>`;
       

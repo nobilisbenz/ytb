@@ -1,3 +1,12 @@
+# Keystore files
+*.jks
+*.keystore
+key.properties
+
+# Android signing
+src-tauri/gen/android/key.properties
+ytb-keystore.jks
+
 # Logs
 logs
 *.log
