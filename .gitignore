@@ -1,0 +1,81 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Node modules
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Rust
+src-tauri/target
+src-tauri/Cargo.lock
+
+# Tauri generated files
+src-tauri/gen
+
+# Build outputs
+*.apk
+*.aab
+*.ipa
+*.app
+*.dmg
+*.pkg
+*.deb
+*.rpm
+*.exe
+*.msi
+
+# Android
+*.apk
+*.aab
+.gradle
+local.properties
+.idea/
+*.iml
+*.hprof
+.cxx/
+build/
+
+# iOS
+*.ipa
+Pods/
+*.xcworkspace
+!default.xcworkspace
+xcuserdata/
+*.moved-aside
+DerivedData
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db

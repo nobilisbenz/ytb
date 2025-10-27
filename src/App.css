@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: system-ui, -apple-system, sans-serif;
+  overflow: hidden;
+}
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+}
+
+.home-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  gap: 20px;
+}
+
+.url-input {
+  width: 90%;
+  max-width: 500px;
+  padding: 15px 20px;
+  font-size: 16px;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border: 2px solid #333333;
+  border-radius: 8px;
+  outline: none;
+}
+
+.url-input:focus {
+  border-color: #ffffff;
+}
+
+.url-input::placeholder {
+  color: #666666;
+}
+
+.go-button {
+  padding: 15px 60px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.go-button:active {
+  transform: scale(0.95);
+}
+
+.player-screen {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.video-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+}
+
+#youtube-player {
+  width: 100%;
+  height: 100%;
+}
+
+.controls {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-top: 1px solid #333333;
+  z-index: 1000;
+}
+
+.time-btn {
+  flex: 1;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border: 1px solid #333333;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
+.time-btn:active {
+  background-color: #333333;
+}
+
+/* Landscape optimization */
+@media (orientation: landscape) {
+  .video-container {
+    height: calc(100vh - 60px);
+  }
+  
+  .controls {
+    padding: 8px;
+  }
+  
+  .time-btn {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+}
