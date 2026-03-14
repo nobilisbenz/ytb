@@ -36,9 +36,5 @@
       "minSdkVersion": 24
     }
   },
-  "plugins": {
-    "clipboard-manager": {
-      "all": true
-    }
-  }
+  "plugins": {}
 }
